@@ -1,7 +1,10 @@
-# Confetti-Calculator-
+# Confetti-Calculator
 
 ## WebPage Link Of Netlify ->
+https://confetti-calculator-roshan.netlify.app/
 
+## Screenshot 
+![Alt text](image.png)
 
 ## Installation
 
