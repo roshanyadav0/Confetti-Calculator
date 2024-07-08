@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Common styles */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dots {
+  display: flex;
+  margin: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background-color: rgb(133, 0, 0);
+}
+
+.dot.yellow {
+  background-color: rgb(129, 129, 5);
+}
+
+.dot.green {
+  background-color: green;
+}
+
+.display {
+  font-size: 4rem;
+  padding: 20px;
+  text-align: right;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+}
+
+.button {
+  font-size: 1.2em;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button.number {
+  color: #ffffff;
+  background-color: #989494;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.button.operator {
+  background-color: #f7931e;
+  color: white;
+}
+
+.button.operator:hover {
+  background-color: #f9a41e;
+}
+
+.button.zero {
+  grid-column: span 2;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background: #4D4D4D;
+  color: white;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 2);
+}
+
+.dark-mode .display {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .button {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .button.number {
+  background-color: #989494;
+}
+
+
+/* Light mode styles */
+.light-mode {
+  background: #f9f9f9;
+  color: black;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .display {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.light-mode .button {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.light-mode .button.number {
+  background-color: #f0f0f0;
+}
+
+/* Additional styles for the toggle button */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-toggle button {
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.theme-toggle button:hover {
+  background-color: #f9a41e;
 }
