@@ -12,7 +12,7 @@ const Calculator = () => {
   const [history, setHistory] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-
+  
   const toggleTheme = () => {
     setIsDarkMode(prevMode => !prevMode);
   };
